@@ -14,7 +14,7 @@ fi
 # Creating file/folder with the old/past date
 
 touch -d 19940612 jpDOB.txt
-mkdir -d 19930612 jaDOB.tx
+
 
 
 
