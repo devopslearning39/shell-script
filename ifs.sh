@@ -2,4 +2,4 @@
 
 FILE="/etc/passwd"
 
-cat $FILE
+echo "$FILE"
