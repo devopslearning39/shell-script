@@ -6,6 +6,6 @@ if [ ! -d $SOURCE_DIR ] ; then
     echo "Source directory doesn't exist"
 fi
 
-DELETABLE_FILES=$( find $SOURCE_DIR -type f -mtime +7 -name "*.txt" )
+DELETABLE_FILES=$( find $SOURCE_DIR -type f -mtime +7 -iname "*.txt" )
 
 echo "$DELETABLE_FILES"
