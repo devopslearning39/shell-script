@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIR="/home/centos/shell-script"
+SOURCE_DIR="/home/centos/shell-script123"
 
 if [ ! -d $SOURCE_DIR ] ; then
     echo "Source directory doesn't exist"
