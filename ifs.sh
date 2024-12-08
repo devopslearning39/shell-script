@@ -1,5 +1,5 @@
 #!/bin/bash
 
-FILE="/etc/passwd"
+file=/etc/passwd
 
-echo "$FILE"
+echo "$file"
