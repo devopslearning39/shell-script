@@ -12,7 +12,7 @@ DELETABLE_FILES=$( find $SOURCE_DIR -type f -mtime +7 -iname "*.txt" )
 
 echo "$DELETABLE_FILES"
 
-while FILES_TO_DELETE= IFS -r line
+while FILES_TO_DELETE IFS=read -r line
     do
     echo "Deleted line : $line"
 done <<< $DELETABLE_FILES
