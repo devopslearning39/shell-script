@@ -1,39 +1,32 @@
 #!/bin/bash
-name=""
-wishes="Good morning!"
 
+NAME=""
+WISHES="Good Morning"
 
 USAGE(){
     echo "USGAE:: $(basename $0) -n <name> -w <wishes>"
     echo "Options::"
-    echo "-n, Specify the name (Mandatory)"
-    echo "-w, Specify the wishes (OPtional), default greeting is Good morning"
-    echo "-h, Help or exit"
+    echo " -n, Specify the name (mandatory)"
+    echo " -w, Specify the wishes. (Optional). Default is Good Morning"
+    echo " -h, Display Help and exit"
 }
 
 while getopts ":n:w:h" opt; do
-  case $opt in
-    n) name="$OPTARG"
-      ;;
-    w) wishes="$OPTARG"
-      ;;
-    h) USAGE
-      exit 0
-      ;;
-    \?) echo "Invalid option: -$OPTARG" >&2
-      USAGE
-      exit 1
-      ;;
-    :) echo "Option -$OPTARG requires an argument." >&2
-      USAGE
-      exit 1
-      ;;
-  esac
+    case $opt in
+        n) NAME="$OPTARG";;
+        w) WISHES="$OPTARG";;
+        \?) echo "invalid options: -"$OPTARG"" >&2; USAGE; exit;;
+        :) USAGE; exit;;
+        h) USAGE; exit;;
+    esac
 done
 
-# Check if required options are set
-if [ -z "$name" ] || [ -z "$wishes" ]; then
-  echo "Both -n (name) and -a (wishes) options are required." >&2
-  USAGE
-  exit 1
+#if [ -z "$NAME" ] || [ -z "$WISHES" ]; then
+if [ -z "$NAME" ]; then # now wishes is optional
+    #echo "ERROR: Both -n and -w are mandatory options."
+    echo "ERROR: -n is mandatory."
+    USAGE
+    exit 1
 fi
+
+echo "Hello $NAME. $WISHES. I have been learning Shell Script."
