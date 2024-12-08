@@ -2,6 +2,8 @@
 
 DISK_USAGE=$(df -hT | grep -vE "tmp|File")
 
+echo "$DISK_USAGE"
+
 
 
 
