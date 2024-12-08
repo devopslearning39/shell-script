@@ -1,8 +1,6 @@
 #!/bin/bash
 
-DISK_USAGE=$(df -hT)
-
-echo "$DISK_USAGE -vE "tmp|File""
+DISK_USAGE=$(df -hT | grep -vE "tmp|File")
 
 
 
