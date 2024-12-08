@@ -8,13 +8,9 @@ else
     echo "File is there"
 fi
 
-while IFS= ":" read -r username password user_id group_id user_fullname home_dir shell_path
+while IFS=":" read -r username password user_id group_id user_fullname home_dir shell_path
 do
-    echo "Username: $username"
-    echo "Password: $password"
-    echo "userId: $user_id"
-    echo "groupId: $group_id"
-    echo "User full name": $user_fullname
-    echo "Home directory: $home_dir"
-    echo "Shell path: $shell_path"
-done < $FILE
+    echo "username: $username"
+    echo "user ID: $user_id"
+    echo "User Full name: $user_fullname"
+done < $file
