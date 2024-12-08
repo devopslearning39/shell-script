@@ -4,7 +4,7 @@ wishes="Good morning!"
 
 
 USAGE(){
-    echo "USAGE:: $(baseline $0) -n <name> , -w <whishes>"
+    echo "USGAE:: $(basename $0) -n <name> -w <wishes>"
     echo "Options::"
     echo "-n, Specify the name (Mandatory)"
     echo "-w, Specify the wishes (OPtional), default greeting is Good morning"
