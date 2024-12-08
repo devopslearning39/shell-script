@@ -2,7 +2,9 @@
 
 DISK_USAGE=$(df -hT)
 
-echo "$DISK_USAGE"
+echo "$DISK_USAGE -vE "tmp|File""
+
+
 
 
 
