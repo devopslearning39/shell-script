@@ -11,4 +11,4 @@ fi
 while IFS= read -r line
 do
     echo "$line"
-done <<< $FILE
+done < $FILE
