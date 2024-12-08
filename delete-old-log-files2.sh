@@ -15,5 +15,5 @@ echo "$DELETABLE_FILES"
 while IFS= read -r line
     do
     rm -rf $line
-    echo "Deleted line : $line"
+    echo "Deleted file : $line"
 done <<< $DELETABLE_FILES
