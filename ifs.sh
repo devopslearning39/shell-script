@@ -1,4 +1,5 @@
 #!/bin/bash
 
-echo "Hello\nWorld!"
-echo -e "Hello\nWorld!"
+FILE="/etc/passwd"
+
+cat $FILE
