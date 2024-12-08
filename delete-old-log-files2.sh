@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIR="/home/centos/shell-script123"
+SOURCE_DIR="/home/centos/shell-script"
 
 if [ ! -d $SOURCE_DIR ] ; then
     echo "Source directory doesn't exist"
@@ -8,4 +8,13 @@ fi
 
 DELETABLE_FILES=$( find $SOURCE_DIR -type f -mtime +7 -iname "*.txt" )
 
+# f: file, i: case-Insensitive
+
 echo "$DELETABLE_FILES"
+
+while FILES_TO_DELETE= IFS -r line
+    do
+    echo "Deleted line : $line"
+done <<< $DELETABLE_FILES
+
+
