@@ -18,7 +18,11 @@ echo -e "Message: $message"
 
 #echo "$message" | mail -s "High Disk Usage" info@joindevops.com
 
-sh mail.sh "DevOps Team" "High Disk Usage" "$message" "info@joindevops.com" "ALERT High Disk Usage"
+# sh mail.sh "DevOps Team" "High Disk Usage" "$message" "info@joindevops.com" "ALERT High Disk Usage"
+
+
+
+
 # grep -vE 'tmp|File':
     #  grep: This is used to search for text patterns in the input.
     # -v: Inverts the match, meaning it excludes any lines that match the given pattern.
