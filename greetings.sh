@@ -1,4 +1,7 @@
 #!/bin/bash
+name=""
+wishes="Good morning!"
+
 
 USAGE(){
     echo "USAGE:: $(baseline $0) -n <name> , -w <whishes>"
@@ -12,7 +15,7 @@ while getopts "n:w:h" opt; do
   case $opt in
     n) name="$OPTARG"
       ;;
-    a) wishes="$OPTARG"
+    w) wishes="$OPTARG"
       ;;
     h) USAGE
       exit 0
