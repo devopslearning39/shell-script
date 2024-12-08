@@ -1,8 +1,12 @@
 #!/bin/bash
 
 DISK_USAGE=$(df -hT | grep -vE "tmp|File")
+DISK_THRESHOLD=1
+MESSAGE=""
 
-echo "$DISK_USAGE"
+if [ $DISK_USAGE -ge $DISK_THRESHOLD ] ; then
+    echo "High disk usage, pls be caution"
+fi
 
 
 
