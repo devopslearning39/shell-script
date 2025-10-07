@@ -3,11 +3,12 @@
 ID=$(id -u)
 
 VALIDATE(){
-    if [ $? -ne 0 ]; then
+    if [ $1 -ne 0 ]; then
         echo "$2 Failed"
         exit 1
     else
         echo "$2 success"
+    fi
 }
 
 if [ $ID -ne 0 ]; then
